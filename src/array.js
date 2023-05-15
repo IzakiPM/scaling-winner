@@ -27,16 +27,16 @@ console.log(duplicateArray([1,2,3,3,4,5]))
 
 //NOTE - Use nested for loops to iterate over 2D arrays 
 
-function iterateArray(arr) {
-    let count = 0
+function iterateArray(arr) { //NOTE - Creating a function that takes in one parameter: 'arr'
+    let count = 0 //NOTE - Initialising a variable called 'count' and assiging it the value of 0 
 
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            if(arr[i][j] === 0) {
-                count++
+    for (let i = 0; i < arr.length; i++) { //NOTE - Using a for loop to iterate over the array 
+        for (let j = 0; j < arr[i].length; j++) { //NOTE - Using nested for loops because the arra is 2D, and have to iterate over the sub arrays
+            if(arr[i][j] === 0) { // NOTE - Condition: iterating over both for loops and find any values equal to 0 in the 2D array 
+                count++ // NOTE - Return 'count' with the value of the number of values found in the above condition
             }
         }
     }
-    return count 
+    return count // NOTE - Return count with the new value  
 }
 console.log(iterateArray([[0,0],[0,1]]))
